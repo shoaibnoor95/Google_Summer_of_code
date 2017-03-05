@@ -1,0 +1,10 @@
+FILE OPENING MODES
+
+"r"	Capablity of reading from a file.
+"w"  	Capablity of writing to a file.
+"a"	Adding new contents at the end of the file.
+"r+"	Reading existing contents writing new contents, modifying existance contents of the file
+"w+"	Writing new contents reading them back.modifying existing contents of the file.
+"a+"	Reading existing contents, appending new contents to the end of the file, cannot modify existing contents 
+
+

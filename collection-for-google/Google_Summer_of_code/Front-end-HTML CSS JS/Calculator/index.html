@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Calculator</title>
+    <script src="calculator.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    
+</head>
+<body>
+    <center>
+    <form name="Simple Calculator">
+<table>
+    <th colspan="7"><input name="result" class="equal"></th>
+    <tr>
+        <td><input type="button" name="7" value="7" onclick="do7()"></td>
+        <td><input type="button" name="8" value="8" onclick="do8()"></td>
+        <td><input type="button" name="9" value="9" onclick="do9()"></td>
+        <td><input type="button" value="/" name="/" onclick="dodivide()"> </td> 
+    </tr> 
+
+    <tr>
+        <td><input type="button" name="4" value="4" onclick="do4()"></td>
+        <td><input type="button" name="5" value="5" onclick="do5()"></td>
+        <td><input type="button" name="6" value="6" onclick="do6()"></td>
+        <td><input type="button" name="*" value="*" onclick="domulti()"></td> 
+    </tr>
+    <tr>
+        <td><input type="button" name="1" value="1" onclick="do1()"></td>
+        <td><input type="button" name="2" value="2" onclick="do2()"></td>
+        <td><input type="button" name="3" value="3" onclick="do3()"></td>
+        <td><input type="button" name=" - " value="-" onclick="dodiff()"></td> 
+    </tr>
+    <tr>
+        <td><input type="button" name="0" value="0" onclick="do0()"></td>
+        <td><input type="button" name="." value="." onclick="do.()"></td>
+        <td><input type="button" name="." value="+" onclick="dosum()"></td>
+        <td><input type="button" name="calc" value="=" onclick="evalu()"></td>
+    </tr>
+</table>
+    </form>
+    </center>
+</body>
+</html>

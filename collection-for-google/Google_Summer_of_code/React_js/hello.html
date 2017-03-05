@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>React Frame Work</title>
+</head>
+<body>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+
+    <div id="app">
+    </div>
+    <div id="app1">
+    </div>
+    <div id="app2">
+    </div>
+    <div id="app3">
+    </div>
+    <div id="app4">
+    </div>
+    <div id="app5">
+    </div>
+    <div id="app6">
+     </div>
+    <div id="app8">
+    </div>
+    <div id="content">
+    </div>
+    <script> 
+    ReactDOM.render(
+    React.DOM.h1(null, "Hello World!"),
+    document.getElementById("app")
+    );
+    </script>
+    
+    <script>
+        ReactDOM.render(
+            React.DOM.h1(null,"Hello World"),
+            document.getElementById("app1")
+        );
+  </script> 
+  <script>
+      ReactDOM.render(
+          React.DOM.h1(null,"Hello World"),
+          document.getElementById("app2")
+           );
+           </script>
+   <script>
+    ReactDOM.render(
+        React.DOM.h1(
+          {
+            id: "my-heading",
+          },
+          "Hello world!"
+        ),
+        document.getElementById('app3')
+      );
+    </script>
+
+   <script>
+       ReactDOM.render(
+           React.DOM.h1(
+               {
+                   id: "my-heading1",
+               },
+               "Hello World!*!"
+           ),
+           document.getElementById('app4')
+       );
+       </script>
+       <script>
+           ReactDOM.render(
+               React.DOM.h1(
+                   {id: "my heading3"},
+                   React.DOM.span(null,
+                       React.DOM.em(null,"Hell"),
+                       "o" 
+                   ),
+                "World"
+               ),
+               document.getElementById("app5")
+           );
+           </script>
+           <script>
+               ReactDOM.render(
+                   React.DOM.h1(
+                       {
+                           style: 
+                           {
+                               background: "black",
+                               color: "white",
+                               fontFamily: "verdana",
+                           }
+                       },
+                       "hello World"
+                   ),
+                   document.getElementById("app6")
+               );
+               </script>
+               <script>
+                   ReactDOM.render(
+                       React.DOM.h1(
+                        {
+                            style:{
+                                background:"black",
+                                color: "white",
+                                fontFamily: "verdana",
+                            }
+                        },
+                        "Hello World"
+                       ),
+                       document.getElementById("app7")
+                   );
+                   </script>
+                   <script>/*
+                       var component=React.createClass({
+                           render:function(){
+                               return React.DOM.span(null,"I m so custom ");
+                           }
+                       }),
+                       ReactDOM.render(
+                           React.createElement(Component),
+                           document.getElementById("app8")
+                       );*/
+                       </script>
+                    <script>
+                        ReactDOM.render(
+                            React.createElement(
+
+                            
+                            'div',
+                            null,
+                            React.createElement (HelloWorld),
+                            React.createElement (HelloWorld),
+                            React.createElement (HelloWorld)
+                        ),
+                        document.getElementById('content')
+                        );
+                        </script>
+</body>
+</html>

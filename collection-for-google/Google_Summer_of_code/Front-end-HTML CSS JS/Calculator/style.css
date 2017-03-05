@@ -1,0 +1,33 @@
+table{
+    background:#B98C8C;
+    margin: 0px auto;
+}
+h1{
+    font-family: Monotype Corsiva;
+}
+
+.del{
+    height: 20px;
+    width: 70px;
+    border-radius:20px 20px;
+    box-shadow: 4px 4px 3px #777777; 
+}
+td{
+    padding: 10px;
+}
+
+input{
+    border-radius:5px 5px;
+    box-shadow: 4px 4px 3px #777777; 
+    height: 25px;
+}
+
+.row{
+    height: 60px;
+    width:30px;     
+}
+
+.result{
+    text-align: right;
+    font-size: 18px;
+}

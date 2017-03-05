@@ -1,0 +1,2356 @@
+2017-01-26 20:01:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "EMPLOYEE" not found; SQL statement:
+select * from Employee; [42102-193]
+2017-01-26 20:27:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "EMPLOYEE" not found; SQL statement:
+drop table EMPLOYEE [42102-193]
+2017-01-26 22:34:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "GENDER VARCHAR(6) DEFAULT '' NOT NULL": "'Select Gender' (13)"; SQL statement:
+insert into Employee(ID,FIRST_NAME,LAST_NAME,ADDRESS,DATE_OF_JOINING,TELEPHONE,MOBILE,SALARY,CNIC,GENDER,P_ADDRESS,EMAIL,PREV_SALARY,ADVANCE_SALARY,QUALIFICATION)values('1','Shoaib','Noor','R-368 Sector 15-A/2','12-08-2017','03112102334','03112102334','0.0','4210166089745','Select Gender','R-368 Sector 15-A/2','shoaibnoor95@hotmail.comDoctor','0.0','0.0','BSCS') [22001-193]
+2017-01-29 21:44:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DELETE *[*] FROM EMPLOYEE WHERE ID =2 "; expected "identifier"; SQL statement:
+delete * from EMPLOYEE where id =2 [42001-193]
+2017-01-29 21:45:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DELETE *[*] FROM EMPLOYEE WHERE ID =2; "; expected "identifier"; SQL statement:
+delete * from EMPLOYEE where id =2; [42001-193]
+2017-01-29 21:50:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "'delete * from EMPLOYEE where id =2;'[*]"; SQL statement:
+'delete * from EMPLOYEE where id =2;' [42000-193]
+2017-01-29 21:50:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "'delete * from EMPLOYEE where id =2'[*];"; SQL statement:
+'delete * from EMPLOYEE where id =2'; [42000-193]
+2017-01-29 21:55:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "'delete * from EMPLOYEE where id ='2[*]'"; SQL statement:
+'delete * from EMPLOYEE where id ='2' [42000-193]
+2017-01-29 22:00:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "'delete * from EMPLOYEE where id ='2[*]'"; SQL statement:
+'delete * from EMPLOYEE where id ='2' [42000-193]
+2017-01-29 22:03:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Parameter "#1" is not set; SQL statement:
+delete  from EMPLOYEE where id =? [90012-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:81)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:164)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:97)
+	at org.h2.command.Command.executeUpdate(Command.java:258)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:201)
+	at Employee.deleteActionPerformed(Employee.java:679)
+	at Employee.access$2300(Employee.java:28)
+	at Employee$23.actionPerformed(Employee.java:263)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6533)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6298)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4888)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4525)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4466)
+	at java.awt.Container.dispatchEventImpl(Container.java:2280)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2017-01-30 21:47:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "Update EMPLOYEE SET FIRST_NAME='Shoaib',SET LAST_NAME='Noor',SET ADDRESS='R-429 Sector 15-A/5',SET DATE_OF_JOINING='12-08-2016',SET TELEPHONE='03112102334',SET MOBILE='03112103334',SET SALARY='25000.0',SET CNIC='4210166089745',SET DESIGNATION='HOD',SET P_ADDRESS='R-429 Sector 15-A/5',SET EMAIL='shoaibnoor95@hotmail.com',GENDER='1',QUALIFICATION='BSCS',SET DESIGNATION='HOD' Where id=[*]'2"; SQL statement:
+Update EMPLOYEE SET FIRST_NAME='Shoaib',SET LAST_NAME='Noor',SET ADDRESS='R-429 Sector 15-A/5',SET DATE_OF_JOINING='12-08-2016',SET TELEPHONE='03112102334',SET MOBILE='03112103334',SET SALARY='25000.0',SET CNIC='4210166089745',SET DESIGNATION='HOD',SET P_ADDRESS='R-429 Sector 15-A/5',SET EMAIL='shoaibnoor95@hotmail.com',GENDER='1',QUALIFICATION='BSCS',SET DESIGNATION='HOD' Where id='2 [42000-193]
+2017-01-30 22:07:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "ADRESS" not found; SQL statement:
+SELECT ADRESS from EMPLOYEE where ID=1 [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.command.dml.Select.prepare(Select.java:853)
+	at org.h2.command.Parser.prepareCommand(Parser.java:259)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:73)
+	at Employee.search(Employee.java:846)
+	at Employee.emp_idFocusLost(Employee.java:767)
+	at Employee.access$300(Employee.java:28)
+	at Employee$3.focusLost(Employee.java:111)
+	at java.awt.AWTEventMulticaster.focusLost(AWTEventMulticaster.java:230)
+	at java.awt.Component.processFocusEvent(Component.java:6425)
+	at java.awt.Component.processEvent(Component.java:6289)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1954)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:995)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:661)
+	at java.awt.Component.dispatchEventImpl(Component.java:4760)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2017-01-30 22:09:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "ADRESS" not found; SQL statement:
+SELECT ADRESS from EMPLOYEE where ID=1 [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.command.dml.Select.prepare(Select.java:853)
+	at org.h2.command.Parser.prepareCommand(Parser.java:259)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:73)
+	at Employee.search(Employee.java:846)
+	at Employee.emp_idFocusLost(Employee.java:767)
+	at Employee.access$300(Employee.java:28)
+	at Employee$3.focusLost(Employee.java:111)
+	at java.awt.AWTEventMulticaster.focusLost(AWTEventMulticaster.java:230)
+	at java.awt.Component.processFocusEvent(Component.java:6425)
+	at java.awt.Component.processEvent(Component.java:6289)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1954)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:995)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:661)
+	at java.awt.Component.dispatchEventImpl(Component.java:4760)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2017-01-30 22:10:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "ADRESS" not found; SQL statement:
+SELECT ADRESS from EMPLOYEE where ID=1 [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.command.dml.Select.prepare(Select.java:853)
+	at org.h2.command.Parser.prepareCommand(Parser.java:259)
+	at org.h2.engine.Session.prepareLocal(Session.java:561)
+	at org.h2.engine.Session.prepareCommand(Session.java:502)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:73)
+	at Employee.search(Employee.java:847)
+	at Employee.emp_idFocusLost(Employee.java:767)
+	at Employee.access$300(Employee.java:28)
+	at Employee$3.focusLost(Employee.java:111)
+	at java.awt.AWTEventMulticaster.focusLost(AWTEventMulticaster.java:230)
+	at java.awt.Component.processFocusEvent(Component.java:6425)
+	at java.awt.Component.processEvent(Component.java:6289)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1954)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:995)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:661)
+	at java.awt.Component.dispatchEventImpl(Component.java:4760)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2017-01-30 22:46:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "SALARY" not found [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3174)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3236)
+	at org.h2.jdbc.JdbcResultSet.getDouble(JdbcResultSet.java:748)
+	at Employee.search(Employee.java:1042)
+	at Employee.emp_idFocusLost(Employee.java:767)
+	at Employee.access$300(Employee.java:28)
+	at Employee$3.focusLost(Employee.java:111)
+	at java.awt.AWTEventMulticaster.focusLost(AWTEventMulticaster.java:230)
+	at java.awt.Component.processFocusEvent(Component.java:6425)
+	at java.awt.Component.processEvent(Component.java:6289)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1954)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:995)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:661)
+	at java.awt.Component.dispatchEventImpl(Component.java:4760)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2017-01-30 22:47:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "SALARY" not found [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3174)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3236)
+	at org.h2.jdbc.JdbcResultSet.getDouble(JdbcResultSet.java:748)
+	at Employee.search(Employee.java:1042)
+	at Employee.emp_idFocusLost(Employee.java:767)
+	at Employee.access$300(Employee.java:28)
+	at Employee$3.focusLost(Employee.java:111)
+	at java.awt.AWTEventMulticaster.focusLost(AWTEventMulticaster.java:230)
+	at java.awt.Component.processFocusEvent(Component.java:6425)
+	at java.awt.Component.processEvent(Component.java:6289)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1954)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:995)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:661)
+	at java.awt.Component.dispatchEventImpl(Component.java:4760)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2017-01-30 22:57:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT FIRST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT First_Name from EMPLOYEE where ID= [42001-193]
+2017-01-30 22:57:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT LAST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Last_Name from EMPLOYEE where ID= [42001-193]
+2017-01-30 22:57:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-01-30 22:57:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DATE_OF_JOINING FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DATE_OF_JOINING from EMPLOYEE where ID= [42001-193]
+2017-01-30 22:57:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-01-30 22:57:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT MOBILE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT MOBILE from EMPLOYEE where ID= [42001-193]
+2017-01-30 22:57:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT P_ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT P_ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-01-30 22:57:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT TELEPHONE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT TELEPHONE from EMPLOYEE where ID= [42001-193]
+2017-01-30 22:57:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT GENDER FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT GENDER from EMPLOYEE where ID= [42001-193]
+2017-01-30 22:57:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CNIC FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT CNIC from EMPLOYEE where ID= [42001-193]
+2017-01-30 22:57:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT EMAIL FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Email from EMPLOYEE where ID= [42001-193]
+2017-01-30 22:57:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT QUALIFICATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT QUALIFICATION from EMPLOYEE where ID= [42001-193]
+2017-01-30 22:57:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-01-30 22:57:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT SALARY FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT SALARY from EMPLOYEE where ID= [42001-193]
+2017-02-01 14:50:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "Update EMPLOYEE SET FIRST_NAME='Shoaib',SET LAST_NAME='Noor',SET ADDRESS='R-368 Sector 15-A/2',SET DATE_OF_JOINING='12-08-2017',SET TELEPHONE='03112102334',SET MOBILE='03112102334',SET SALARY='25000.0',SET CNIC='4210166089745',SET DESIGNATION='HOD',SET P_ADDRESS='R-368 Sector 15-A/2',SET EMAIL='shoaibnoor95@hotmail.com',GENDER='1',QUALIFICATION='BSCS',SET DESIGNATION=[*]'HOD Where id=1"; SQL statement:
+Update EMPLOYEE SET FIRST_NAME='Shoaib',SET LAST_NAME='Noor',SET ADDRESS='R-368 Sector 15-A/2',SET DATE_OF_JOINING='12-08-2017',SET TELEPHONE='03112102334',SET MOBILE='03112102334',SET SALARY='25000.0',SET CNIC='4210166089745',SET DESIGNATION='HOD',SET P_ADDRESS='R-368 Sector 15-A/2',SET EMAIL='shoaibnoor95@hotmail.com',GENDER='1',QUALIFICATION='BSCS',SET DESIGNATION='HOD Where id=1 [42000-193]
+2017-02-01 18:21:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT FIRST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT First_Name from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:21:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT LAST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Last_Name from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:21:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:21:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DATE_OF_JOINING FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DATE_OF_JOINING from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:21:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:21:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT MOBILE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT MOBILE from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:21:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT P_ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT P_ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:21:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT TELEPHONE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT TELEPHONE from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:21:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT GENDER FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT GENDER from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:21:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CNIC FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT CNIC from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:21:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT EMAIL FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Email from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:21:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT QUALIFICATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT QUALIFICATION from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:21:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:21:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT SALARY FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT SALARY from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:23:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT FIRST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT First_Name from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:23:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT LAST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Last_Name from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:23:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:23:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DATE_OF_JOINING FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DATE_OF_JOINING from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:23:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:23:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT MOBILE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT MOBILE from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:23:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT P_ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT P_ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:23:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT TELEPHONE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT TELEPHONE from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:23:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT GENDER FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT GENDER from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:23:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CNIC FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT CNIC from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:23:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT EMAIL FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Email from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:23:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT QUALIFICATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT QUALIFICATION from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:23:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:23:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT SALARY FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT SALARY from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:25:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT FIRST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT First_Name from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:25:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT LAST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Last_Name from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:25:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:25:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DATE_OF_JOINING FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DATE_OF_JOINING from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:25:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:25:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT MOBILE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT MOBILE from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:25:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT P_ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT P_ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:25:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT TELEPHONE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT TELEPHONE from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:25:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT GENDER FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT GENDER from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:25:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CNIC FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT CNIC from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:25:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT EMAIL FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Email from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:25:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT QUALIFICATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT QUALIFICATION from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:25:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:25:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT SALARY FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT SALARY from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:25:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "GENDER VARCHAR(6) DEFAULT '' NOT NULL": "'Select Gender' (13)"; SQL statement:
+insert into Employee(ID,FIRST_NAME,LAST_NAME,ADDRESS,DATE_OF_JOINING,TELEPHONE,MOBILE,SALARY,CNIC,GENDER,P_ADDRESS,EMAIL,QUALIFICATION,DESIGNATION)values('3',' Shoaib','Noor','require','require','require','require','25000.0','','Select Gender','require','require','require','require') [22001-193]
+2017-02-01 18:26:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT FIRST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT First_Name from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:26:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT LAST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Last_Name from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:26:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:26:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DATE_OF_JOINING FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DATE_OF_JOINING from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:26:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:26:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT MOBILE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT MOBILE from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:26:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT P_ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT P_ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:26:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT TELEPHONE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT TELEPHONE from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:26:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT GENDER FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT GENDER from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:26:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CNIC FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT CNIC from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:26:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT EMAIL FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Email from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:26:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT QUALIFICATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT QUALIFICATION from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:26:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:26:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT SALARY FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT SALARY from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:30:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT FIRST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT First_Name from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:30:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT LAST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Last_Name from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:30:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:30:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DATE_OF_JOINING FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DATE_OF_JOINING from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:30:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:30:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT MOBILE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT MOBILE from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:30:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT P_ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT P_ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:30:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT TELEPHONE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT TELEPHONE from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:30:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT GENDER FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT GENDER from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:30:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CNIC FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT CNIC from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:30:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT EMAIL FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Email from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:30:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT QUALIFICATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT QUALIFICATION from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:30:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:30:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT SALARY FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT SALARY from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:39:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT FIRST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT First_Name from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:39:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT LAST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Last_Name from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:39:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:39:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DATE_OF_JOINING FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DATE_OF_JOINING from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:39:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:39:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT MOBILE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT MOBILE from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:39:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT P_ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT P_ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:39:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT TELEPHONE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT TELEPHONE from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:39:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT GENDER FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT GENDER from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:39:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CNIC FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT CNIC from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:39:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT EMAIL FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Email from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:39:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT QUALIFICATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT QUALIFICATION from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:39:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:39:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT SALARY FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT SALARY from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:46:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT FIRST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT First_Name from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:46:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT LAST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Last_Name from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:46:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:46:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DATE_OF_JOINING FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DATE_OF_JOINING from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:46:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:46:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT MOBILE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT MOBILE from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:46:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT P_ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT P_ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:46:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT TELEPHONE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT TELEPHONE from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:46:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT GENDER FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT GENDER from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:46:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CNIC FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT CNIC from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:46:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT EMAIL FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Email from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:46:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT QUALIFICATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT QUALIFICATION from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:46:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-01 18:46:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT SALARY FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT SALARY from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:17:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT FIRST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT First_Name from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:17:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT LAST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Last_Name from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:17:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:17:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DATE_OF_JOINING FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DATE_OF_JOINING from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:17:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:17:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT MOBILE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT MOBILE from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:17:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT P_ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT P_ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:17:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT TELEPHONE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT TELEPHONE from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:17:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT GENDER FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT GENDER from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:17:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CNIC FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT CNIC from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:17:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT EMAIL FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Email from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:17:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT QUALIFICATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT QUALIFICATION from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:17:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:17:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT SALARY FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT SALARY from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:18:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT FIRST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT First_Name from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:18:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT LAST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Last_Name from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:18:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:18:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DATE_OF_JOINING FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DATE_OF_JOINING from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:18:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:18:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT MOBILE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT MOBILE from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:18:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT P_ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT P_ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:18:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT TELEPHONE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT TELEPHONE from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:18:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT GENDER FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT GENDER from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:18:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CNIC FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT CNIC from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:18:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT EMAIL FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Email from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:18:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT QUALIFICATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT QUALIFICATION from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:18:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:18:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT SALARY FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT SALARY from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:21:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT FIRST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT First_Name from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:21:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT LAST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Last_Name from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:21:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:21:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DATE_OF_JOINING FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DATE_OF_JOINING from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:21:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:21:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT MOBILE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT MOBILE from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:21:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT P_ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT P_ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:21:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT TELEPHONE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT TELEPHONE from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:21:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT GENDER FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT GENDER from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:21:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CNIC FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT CNIC from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:21:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT EMAIL FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Email from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:21:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT QUALIFICATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT QUALIFICATION from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:21:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:21:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT SALARY FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT SALARY from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:27:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT FIRST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT First_Name from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:27:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT LAST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Last_Name from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:27:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:27:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DATE_OF_JOINING FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DATE_OF_JOINING from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:27:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:27:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT MOBILE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT MOBILE from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:27:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT P_ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT P_ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:27:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT TELEPHONE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT TELEPHONE from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:27:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT GENDER FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT GENDER from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:27:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CNIC FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT CNIC from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:27:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT EMAIL FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Email from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:27:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT QUALIFICATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT QUALIFICATION from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:27:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:27:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT SALARY FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT SALARY from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:43:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT FIRST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT First_Name from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:43:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT LAST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Last_Name from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:43:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:43:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DATE_OF_JOINING FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DATE_OF_JOINING from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:43:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:43:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT MOBILE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT MOBILE from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:43:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT P_ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT P_ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:43:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT TELEPHONE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT TELEPHONE from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:43:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT GENDER FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT GENDER from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:43:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CNIC FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT CNIC from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:43:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT EMAIL FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Email from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:43:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT QUALIFICATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT QUALIFICATION from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:43:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:43:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT SALARY FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT SALARY from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:56:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT FIRST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT First_Name from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:56:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT LAST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Last_Name from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:56:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:56:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DATE_OF_JOINING FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DATE_OF_JOINING from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:56:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:56:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT MOBILE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT MOBILE from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:56:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT P_ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT P_ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:56:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT TELEPHONE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT TELEPHONE from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:56:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT GENDER FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT GENDER from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:56:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CNIC FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT CNIC from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:56:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT EMAIL FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Email from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:56:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT QUALIFICATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT QUALIFICATION from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:56:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:56:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT SALARY FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT SALARY from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:57:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT FIRST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT First_Name from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:57:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT LAST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Last_Name from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:57:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:57:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DATE_OF_JOINING FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DATE_OF_JOINING from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:57:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:57:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT MOBILE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT MOBILE from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:57:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT P_ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT P_ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:57:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT TELEPHONE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT TELEPHONE from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:57:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT GENDER FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT GENDER from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:57:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CNIC FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT CNIC from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:57:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT EMAIL FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Email from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:57:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT QUALIFICATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT QUALIFICATION from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:57:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-05 19:57:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT SALARY FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT SALARY from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:07:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT FIRST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT First_Name from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:07:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT LAST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Last_Name from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:07:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:07:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DATE_OF_JOINING FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DATE_OF_JOINING from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:07:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:07:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT MOBILE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT MOBILE from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:07:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT P_ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT P_ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:07:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT TELEPHONE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT TELEPHONE from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:07:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT GENDER FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT GENDER from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:07:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CNIC FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT CNIC from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:07:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT EMAIL FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Email from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:07:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT QUALIFICATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT QUALIFICATION from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:07:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:07:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT SALARY FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT SALARY from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:28:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT FIRST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT First_Name from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:28:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT LAST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Last_Name from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:28:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:28:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DATE_OF_JOINING FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DATE_OF_JOINING from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:28:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:28:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT MOBILE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT MOBILE from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:28:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT P_ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT P_ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:28:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT TELEPHONE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT TELEPHONE from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:28:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT GENDER FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT GENDER from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:28:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CNIC FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT CNIC from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:28:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT EMAIL FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Email from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:28:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT QUALIFICATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT QUALIFICATION from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:28:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:28:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT SALARY FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT SALARY from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:28:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT FIRST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT First_Name from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:28:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT LAST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Last_Name from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:28:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:28:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DATE_OF_JOINING FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DATE_OF_JOINING from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:28:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:28:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT MOBILE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT MOBILE from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:28:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT P_ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT P_ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:28:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT TELEPHONE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT TELEPHONE from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:28:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT GENDER FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT GENDER from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:28:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CNIC FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT CNIC from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:28:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT EMAIL FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Email from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:28:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT QUALIFICATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT QUALIFICATION from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:28:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-05 20:28:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT SALARY FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT SALARY from EMPLOYEE where ID= [42001-193]
+2017-02-05 21:05:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "TELEPHONE" not found [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3174)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3236)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:310)
+	at Employee.search(Employee.java:1012)
+	at Employee.emp_idFocusLost(Employee.java:772)
+	at Employee.access$300(Employee.java:28)
+	at Employee$3.focusLost(Employee.java:111)
+	at java.awt.AWTEventMulticaster.focusLost(AWTEventMulticaster.java:230)
+	at java.awt.Component.processFocusEvent(Component.java:6425)
+	at java.awt.Component.processEvent(Component.java:6289)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1954)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:995)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:661)
+	at java.awt.Component.dispatchEventImpl(Component.java:4760)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2017-02-05 21:43:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "TELEPHONE" not found [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3174)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3236)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:310)
+	at Employee.search(Employee.java:1012)
+	at Employee.emp_idFocusLost(Employee.java:772)
+	at Employee.access$300(Employee.java:28)
+	at Employee$3.focusLost(Employee.java:111)
+	at java.awt.AWTEventMulticaster.focusLost(AWTEventMulticaster.java:230)
+	at java.awt.Component.processFocusEvent(Component.java:6425)
+	at java.awt.Component.processEvent(Component.java:6289)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1954)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:995)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:661)
+	at java.awt.Component.dispatchEventImpl(Component.java:4760)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2017-02-07 19:48:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT FIRST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT First_Name from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:48:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT LAST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Last_Name from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:48:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:48:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DATE_OF_JOINING FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DATE_OF_JOINING from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:48:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:48:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT MOBILE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT MOBILE from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:48:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT P_ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT P_ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:48:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT TELEPHONE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT TELEPHONE from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:48:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT GENDER FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT GENDER from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:48:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CNIC FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT CNIC from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:48:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT EMAIL FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Email from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:48:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT QUALIFICATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT QUALIFICATION from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:48:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:48:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT SALARY FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT SALARY from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:49:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT FIRST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT First_Name from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:49:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT LAST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Last_Name from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:49:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:49:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DATE_OF_JOINING FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DATE_OF_JOINING from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:49:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:49:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT MOBILE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT MOBILE from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:49:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT P_ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT P_ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:49:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT TELEPHONE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT TELEPHONE from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:49:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT GENDER FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT GENDER from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:49:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CNIC FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT CNIC from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:49:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT EMAIL FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Email from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:49:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT QUALIFICATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT QUALIFICATION from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:49:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:49:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT SALARY FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT SALARY from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:49:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT FIRST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT First_Name from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:49:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT LAST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Last_Name from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:49:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:49:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DATE_OF_JOINING FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DATE_OF_JOINING from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:49:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:49:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT MOBILE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT MOBILE from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:49:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT P_ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT P_ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:49:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT TELEPHONE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT TELEPHONE from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:49:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT GENDER FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT GENDER from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:49:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CNIC FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT CNIC from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:49:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT EMAIL FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Email from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:49:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT QUALIFICATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT QUALIFICATION from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:49:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:49:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT SALARY FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT SALARY from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:50:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT FIRST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT First_Name from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:50:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT LAST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Last_Name from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:50:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:50:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DATE_OF_JOINING FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DATE_OF_JOINING from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:50:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:50:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT MOBILE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT MOBILE from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:50:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT P_ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT P_ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:50:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT TELEPHONE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT TELEPHONE from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:50:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT GENDER FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT GENDER from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:50:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CNIC FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT CNIC from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:50:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT EMAIL FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Email from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:50:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT QUALIFICATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT QUALIFICATION from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:50:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-07 19:50:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT SALARY FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT SALARY from EMPLOYEE where ID= [42001-193]
+2017-02-07 20:28:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "TELEPHONE" not found [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3174)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3236)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:310)
+	at Employee.search(Employee.java:1022)
+	at Employee.emp_idFocusLost(Employee.java:772)
+	at Employee.access$300(Employee.java:28)
+	at Employee$3.focusLost(Employee.java:111)
+	at java.awt.AWTEventMulticaster.focusLost(AWTEventMulticaster.java:230)
+	at java.awt.Component.processFocusEvent(Component.java:6425)
+	at java.awt.Component.processEvent(Component.java:6289)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1954)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:995)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:661)
+	at java.awt.Component.dispatchEventImpl(Component.java:4760)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2017-02-07 20:28:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "TELEPHONE" not found [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3174)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3236)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:310)
+	at Employee.search(Employee.java:1022)
+	at Employee.emp_idFocusLost(Employee.java:772)
+	at Employee.access$300(Employee.java:28)
+	at Employee$3.focusLost(Employee.java:111)
+	at java.awt.AWTEventMulticaster.focusLost(AWTEventMulticaster.java:230)
+	at java.awt.Component.processFocusEvent(Component.java:6425)
+	at java.awt.Component.processEvent(Component.java:6289)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1954)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:995)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:661)
+	at java.awt.Component.dispatchEventImpl(Component.java:4760)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2017-02-07 20:28:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "TELEPHONE" not found [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3174)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3236)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:310)
+	at Employee.search(Employee.java:1022)
+	at Employee.emp_idFocusLost(Employee.java:772)
+	at Employee.access$300(Employee.java:28)
+	at Employee$3.focusLost(Employee.java:111)
+	at java.awt.AWTEventMulticaster.focusLost(AWTEventMulticaster.java:230)
+	at java.awt.Component.processFocusEvent(Component.java:6425)
+	at java.awt.Component.processEvent(Component.java:6289)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1954)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:995)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:661)
+	at java.awt.Component.dispatchEventImpl(Component.java:4760)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2017-02-07 20:29:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "TELEPHONE" not found [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3174)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3236)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:310)
+	at Employee.search(Employee.java:1022)
+	at Employee.emp_idFocusLost(Employee.java:772)
+	at Employee.access$300(Employee.java:28)
+	at Employee$3.focusLost(Employee.java:111)
+	at java.awt.AWTEventMulticaster.focusLost(AWTEventMulticaster.java:230)
+	at java.awt.Component.processFocusEvent(Component.java:6425)
+	at java.awt.Component.processEvent(Component.java:6289)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1954)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:995)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:661)
+	at java.awt.Component.dispatchEventImpl(Component.java:4760)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2017-02-07 20:29:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "TELEPHONE" not found [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3174)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3236)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:310)
+	at Employee.search(Employee.java:1022)
+	at Employee.emp_idFocusLost(Employee.java:772)
+	at Employee.access$300(Employee.java:28)
+	at Employee$3.focusLost(Employee.java:111)
+	at java.awt.AWTEventMulticaster.focusLost(AWTEventMulticaster.java:230)
+	at java.awt.Component.processFocusEvent(Component.java:6425)
+	at java.awt.Component.processEvent(Component.java:6289)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1954)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:995)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:661)
+	at java.awt.Component.dispatchEventImpl(Component.java:4760)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2017-02-07 20:30:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "TELEPHONE" not found [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3174)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3236)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:310)
+	at Employee.search(Employee.java:1022)
+	at Employee.emp_idFocusLost(Employee.java:772)
+	at Employee.access$300(Employee.java:28)
+	at Employee$3.focusLost(Employee.java:111)
+	at java.awt.AWTEventMulticaster.focusLost(AWTEventMulticaster.java:230)
+	at java.awt.Component.processFocusEvent(Component.java:6425)
+	at java.awt.Component.processEvent(Component.java:6289)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1954)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:995)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:661)
+	at java.awt.Component.dispatchEventImpl(Component.java:4760)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2017-02-07 20:30:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "TELEPHONE" not found [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3174)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3236)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:310)
+	at Employee.search(Employee.java:1022)
+	at Employee.emp_idFocusLost(Employee.java:772)
+	at Employee.access$300(Employee.java:28)
+	at Employee$3.focusLost(Employee.java:111)
+	at java.awt.AWTEventMulticaster.focusLost(AWTEventMulticaster.java:230)
+	at java.awt.Component.processFocusEvent(Component.java:6425)
+	at java.awt.Component.processEvent(Component.java:6289)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1954)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:995)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:661)
+	at java.awt.Component.dispatchEventImpl(Component.java:4760)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2017-02-07 20:30:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "TELEPHONE" not found [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3174)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3236)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:310)
+	at Employee.search(Employee.java:1022)
+	at Employee.emp_idFocusLost(Employee.java:772)
+	at Employee.access$300(Employee.java:28)
+	at Employee$3.focusLost(Employee.java:111)
+	at java.awt.AWTEventMulticaster.focusLost(AWTEventMulticaster.java:230)
+	at java.awt.Component.processFocusEvent(Component.java:6425)
+	at java.awt.Component.processEvent(Component.java:6289)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1954)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:995)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:661)
+	at java.awt.Component.dispatchEventImpl(Component.java:4760)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2017-02-07 20:30:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "TELEPHONE" not found [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3174)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3236)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:310)
+	at Employee.search(Employee.java:1022)
+	at Employee.emp_idFocusLost(Employee.java:772)
+	at Employee.access$300(Employee.java:28)
+	at Employee$3.focusLost(Employee.java:111)
+	at java.awt.AWTEventMulticaster.focusLost(AWTEventMulticaster.java:230)
+	at java.awt.Component.processFocusEvent(Component.java:6425)
+	at java.awt.Component.processEvent(Component.java:6289)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1954)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:995)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:661)
+	at java.awt.Component.dispatchEventImpl(Component.java:4760)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2017-02-09 21:30:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 21:35:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:06:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:06:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:06:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:06:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:06:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:06:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:06:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:06:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:10:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:10:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:10:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:10:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:13:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:13:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:13:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:13:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:13:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:13:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:13:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:13:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:13:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:13:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:13:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:13:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:13:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:13:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:13:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:13:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:14:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:14:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:14:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:14:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:14:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:14:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:15:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:15:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:15:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:15:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:15:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:15:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:15:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:15:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:15:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:15:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:15:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:15:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:15:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:15:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:15:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:15:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:15:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:15:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:18:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:18:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:18:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:18:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:18:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:18:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:18:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:18:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:18:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:18:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:18:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:18:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:18:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:18:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:18:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:18:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:22:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:22:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:22:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:22:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:22:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:22:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:22:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:22:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:26:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:26:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:26:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:26:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:26:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:26:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:26:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:26:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:27:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "LAST_NAME" not found [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3174)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3236)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:310)
+	at Employee.search(Employee.java:887)
+	at Employee.emp_idFocusLost(Employee.java:772)
+	at Employee.access$300(Employee.java:28)
+	at Employee$3.focusLost(Employee.java:111)
+	at java.awt.AWTEventMulticaster.focusLost(AWTEventMulticaster.java:230)
+	at java.awt.Component.processFocusEvent(Component.java:6425)
+	at java.awt.Component.processEvent(Component.java:6289)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1954)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:995)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:661)
+	at java.awt.Component.dispatchEventImpl(Component.java:4760)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2017-02-09 22:27:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:27:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:27:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:27:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:27:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:27:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:27:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:29:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:29:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:29:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:29:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:29:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:29:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:29:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:31:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:31:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:31:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:31:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:31:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:31:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:31:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:31:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:31:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:31:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:31:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:32:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:32:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:32:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:32:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:33:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:33:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:33:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:33:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:33:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:33:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:33:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:33:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:33:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:33:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:33:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:33:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:34:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:34:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:34:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:34:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:36:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:36:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:36:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:36:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:38:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:38:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:38:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:39:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:39:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-09 22:39:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:12:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:12:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:12:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:15:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:15:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:15:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:15:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:18:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:18:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:18:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:18:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:20:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:20:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:20:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:20:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:22:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:22:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:22:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:22:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:24:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:24:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:24:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:24:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:24:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:24:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:27:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:27:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:27:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:27:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:36:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:36:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:36:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:36:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:39:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:39:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:39:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:39:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "SALARY" not found [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3174)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3236)
+	at org.h2.jdbc.JdbcResultSet.getDouble(JdbcResultSet.java:748)
+	at Employee.search(Employee.java:1084)
+	at Employee.emp_idFocusLost(Employee.java:772)
+	at Employee.access$300(Employee.java:28)
+	at Employee$3.focusLost(Employee.java:111)
+	at java.awt.AWTEventMulticaster.focusLost(AWTEventMulticaster.java:230)
+	at java.awt.Component.processFocusEvent(Component.java:6425)
+	at java.awt.Component.processEvent(Component.java:6289)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1954)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:995)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:661)
+	at java.awt.Component.dispatchEventImpl(Component.java:4760)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2017-02-10 19:40:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:40:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:40:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:40:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "SALARY" not found [42122-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3174)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3236)
+	at org.h2.jdbc.JdbcResultSet.getDouble(JdbcResultSet.java:748)
+	at Employee.search(Employee.java:1084)
+	at Employee.emp_idFocusLost(Employee.java:772)
+	at Employee.access$300(Employee.java:28)
+	at Employee$3.focusLost(Employee.java:111)
+	at java.awt.AWTEventMulticaster.focusLost(AWTEventMulticaster.java:230)
+	at java.awt.Component.processFocusEvent(Component.java:6425)
+	at java.awt.Component.processEvent(Component.java:6289)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1954)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:995)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:661)
+	at java.awt.Component.dispatchEventImpl(Component.java:4760)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2017-02-10 19:41:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT FIRST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT First_Name from EMPLOYEE where ID= [42001-193]
+2017-02-10 19:41:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT LAST_NAME FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT Last_Name from EMPLOYEE where ID= [42001-193]
+2017-02-10 19:41:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-10 19:41:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DATE_OF_JOINING FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DATE_OF_JOINING from EMPLOYEE where ID= [42001-193]
+2017-02-10 19:41:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-10 19:41:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT MOBILE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT MOBILE from EMPLOYEE where ID= [42001-193]
+2017-02-10 19:41:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT P_ADDRESS FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT P_ADDRESS from EMPLOYEE where ID= [42001-193]
+2017-02-10 19:41:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT TELEPHONE FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT TELEPHONE from EMPLOYEE where ID= [42001-193]
+2017-02-10 19:41:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT GENDER FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT GENDER from EMPLOYEE where ID= [42001-193]
+2017-02-10 19:41:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CNIC FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT CNIC from EMPLOYEE where ID= [42001-193]
+2017-02-10 19:41:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT EMAIL FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT EMAIL from EMPLOYEE where ID= [42001-193]
+2017-02-10 19:41:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT QUALIFICATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT QUALIFICATION from EMPLOYEE where ID= [42001-193]
+2017-02-10 19:41:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT DESIGNATION FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT DESIGNATION from EMPLOYEE where ID= [42001-193]
+2017-02-10 19:41:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT SALARY FROM EMPLOYEE WHERE ID= [*]"; expected "ALL, ANY, SOME"; SQL statement:
+SELECT salary from EMPLOYEE where ID= [42001-193]
+2017-02-10 19:41:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:41:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:41:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:41:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:41:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:41:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:41:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:41:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:42:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:42:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:42:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 19:42:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 20:03:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 20:03:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 20:03:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 20:03:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 20:03:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 20:03:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 20:03:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 20:03:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 20:06:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 20:06:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 20:06:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 20:06:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 20:10:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 20:10:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 20:10:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-10 20:10:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-13 19:32:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-13 19:32:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-13 19:32:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-13 19:32:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-13 19:32:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-13 19:32:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-13 19:32:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-13 19:32:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-13 19:32:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-13 19:32:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-13 19:32:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-13 19:32:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-13 19:33:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-13 19:33:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-13 19:33:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-13 19:33:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-13 19:33:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-13 19:33:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-13 19:33:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-13 19:33:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-13 19:33:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-13 19:33:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-13 19:33:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-13 19:33:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-13 19:33:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-13 19:33:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-13 19:33:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
+2017-02-13 19:33:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-193]
