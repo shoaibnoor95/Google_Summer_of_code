@@ -1,0 +1,13 @@
+<% include _header %>
+
+    <b>Enter the confirmation code or you may confirm bv cliking the link sent to your email addresss</b>
+    <form action="/confirmation" method="post">
+    <input type="text" name="confirmed">
+    <input type="submit" name="named" value="confirm"  class="btn btn-primary btn-block" >
+    <br/>
+    <input type="submit" value="resendCode" name="named" class="btn btn-primary btn-block">
+
+</form>
+
+
+<% include _footer %>

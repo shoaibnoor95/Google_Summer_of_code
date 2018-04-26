@@ -1,0 +1,159 @@
+var express = require("express");
+var passport = require("passport");
+var User = require("./models/user");
+var Token = require("./models/Token");
+var mongoose = require('mongoose');
+var router = express.Router();
+var crypto=require('crypto');
+var nodemailer=require('nodemailer');
+function ensureAuthenticated(req, res, next) {
+  if (req.isAuthenticated()) {
+    next();
+  } else {
+    req.flash("info", "You must be logged in to see this page.");
+    res.redirect("/login");
+  }
+}
+
+router.use(function(req, res, next) {
+  res.locals.currentUser = req.user;
+  res.locals.errors = req.flash("error");
+  res.locals.infos = req.flash("info");
+  next();
+});
+
+router.get("/", function(req, res, next) {
+  User.find()
+  .sort({ createdAt: "descending" })
+  .exec(function(err, users) {
+    if (err) { return next(err); }
+    res.render("index", { users: users });
+  });
+});
+
+router.get("/login", function(req, res) {
+  res.render("login");
+});
+
+router.post("/login", passport.authenticate("login", {
+  successRedirect: "/",
+  failureRedirect: "/login",
+  failureFlash: true
+}));
+
+router.get("/logout", function(req, res) {
+  req.logout();
+  res.redirect("/");
+});
+
+router.get("/signup", function(req, res) {
+  res.render("signup");
+});
+
+router.post("/signup", function(req, res, next) {
+
+  var username = req.body.username;
+  
+  var email = req.body.email;
+  var phoneNumber=req.body.phoneNumber;
+  
+User.findOne({  $or:[{username: username}, {email: email }]},function(err, user) {
+
+     if (err) { 
+         req.flash("Error","Something went wrong"); 
+        }
+     if (user) {
+       req.flash("error", "User already exists with this username or email address");
+      return res.redirect("/signup");
+     }
+    var password = req.body.password;
+    var displayName=req.body.displayname;
+    var newUser = new User({
+      username: username,
+      password: password,
+      email: email,
+      displayName:displayName,
+      phone_Number: phoneNumber
+        });
+ newUser.save(next);
+       var token = new Token({
+       _userId: newUser._id, 
+       token: crypto.randomBytes(16).toString('hex') 
+      });
+      
+    token.save(function (err) {
+      if(err){
+        req.flash(err.message);
+        return;
+      }
+      var transporter= nodemailer.createTransport({
+        service:'Gmail',
+        auth:{
+          user:'shoaib.1995.noor@gmail.com',
+          pass: '987654321fga'
+        }});
+        var mailOptions={
+          from:'donotReply@tutons.com',
+          to: email,
+          subject: 'tutions email confirmation',
+          text: 'Dear Mr/Mrs/Miss '+displayName+' please click the following link to confirm your account',
+          html: "<a =href'http://tutons.com/email-verification/'+token'>Confimation link</a>"
+        };
+        transporter.sendMail(mailOptions,function(err,info){
+          if(err){
+            console.log(err);
+            res.json('error occur')
+            return;
+      }
+
+          console.log('Message sent: ' +info.response);
+          res.json({yo:info.response});
+          return;
+      })
+    })
+  });
+
+
+     
+  
+  }, passport.authenticate("login", {
+  successRedirect: "/",
+  failureRedirect: "/signup",
+  failureFlash: true
+}));
+
+router.get("/users/:username", function(req, res, next) {
+  User.findOne({ username: req.params.username }, function(err, user) {
+    if (err) { return next(err); }
+    if (!user) { return next(404); }
+    res.render("profile", { user: user });
+  });
+});
+
+router.get("/edit", ensureAuthenticated, function(req, res) {
+  res.render("edit");
+});
+router.get('/tutons.com/email-confirmation/:code',function(req,res,next){
+  var userr=req.params.code;
+
+});
+router.post("/edit", ensureAuthenticated, function(req, res, next) {
+  req.user.displayName = req.body.displayname;
+  req.user.bio = req.body.bio;
+  req.user.save(function(err) {
+    if (err) {
+      next(err);
+      return;
+    }
+    req.flash("info", "Profile updated!");
+    res.redirect("/edit");
+  });
+
+});
+module.exports = router;
+"devDependencies": {
+    "make-node": "0.3.x",
+    "mocha": "1.x.x",
+    "chai": "2.x.x",
+    "chai-passport-strategy": "1.x.x"
+  }
