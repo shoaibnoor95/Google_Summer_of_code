@@ -1,0 +1,1381 @@
+@media (max-width: 575px) {
+    .d-b{
+        display: block
+    }
+    .main {
+        padding: 0
+    }
+    .main  .img {
+        width: 100%;
+        /* background: url("images/construction/transport-6.jpg")no-repeat center center fixed;
+        background-size: cover; */
+
+    }
+    .img{
+        width: 100%;
+    }
+    .position_absolute{
+        /* position: fixed; */
+        width: 100%;
+        z-index: +3
+    }
+    .park-main{
+        margin-top: 10%;
+        /* background-color: rgba(200 , 200 , 200 , 0.5 ) */
+    }
+    .border-radius{
+        border: 2px solid #0071bb;
+        padding: 8%;
+        margin: 2%;;
+        border-radius: 100%;
+        background: #0091bb;
+        z-index: 3;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        font-size: 120%
+    }
+    .border-radius:hover{
+        background: #0071bb;
+        cursor: pointer;
+    }
+    .border-radius:active , .border-radius:focus {
+        background: #0091bb;
+        box-shadow: 2px 2px 2px 2px #0071bb
+
+    }
+    .border-radius::selection {
+        background: none;
+    }
+    .border-radius-1{
+        border: 2px solid #8cc636;
+        padding: 8%;
+        box-shadow: 2px 2px 12px 2px #ddd;
+        margin: 2%;;
+        /* border-radius: 0% 100%; */
+        background: #8cc636;
+        z-index: 3;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        font-size: 120%
+    }
+    .border-radius-1:hover{
+        background: #8cc616;
+        cursor: pointer;
+    }
+    .border-radius-1:active , .border-radius-1:focus {
+        background: #8cc636;
+        box-shadow: 2px 2px 12px 2px #fff
+
+    }
+    .border-radius-1::selection {
+        background: none;
+    }
+    .border-radius-3{
+        border: 2px solid #8cc636;
+        padding: 8%;
+        margin: 2%;;
+        border-radius: 100% 0%;
+        background: #8cc636;
+        box-shadow: 2px 2px 12px 2px #ddd;
+        z-index: 3;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        font-size: 120%
+    }
+    .border-radius-3:hover{
+        background: #8cc616;
+        cursor: pointer;
+    }
+    .border-radius-3:active , .border-radius-3:focus {
+        background: #8cc636;
+        box-shadow: 2px 2px 12px 2px #fff
+
+    }
+    .border-radius-3::selection {
+        background: none;
+    }
+    .border-radius-2{
+        border: 2px solid rgb(116 , 64 , 33 );
+        padding: 8%;
+        margin: 2%;;
+        border-radius: 190% 100% 20% 0%;
+        background: rgb(116 , 64 , 33 );
+        box-shadow: 2px 2px 12px 2px #ddd;
+        z-index: 3;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        font-size: 120%
+    }
+    .border-radius-2:hover{
+        background: rgb(116 , 60 , 33 );
+        cursor: pointer;
+    }
+    .border-radius-2:active , .border-radius-2:focus {
+        background: rgb(116 , 64 , 33 );
+        box-shadow: 2px 2px 12px 2px #fff
+
+    }
+    .border-radius-2::selection {
+        background: none;
+    }
+    .bg-marquee{
+        margin-top: 10%;
+        background: #0071bb;
+        opacity: 0.4;
+        color: #fff;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 130%;
+    }
+    .main .bg-blur{
+        display: block;
+        height: 580px;
+        /* background: #0091bb; */
+        /* background-image: url(../img/main.jpg); */
+        background: url(../img/download.jpg)no-repeat center center fixed;
+        background-size: cover;
+        opacity: .5em;
+        /* background: transparent; */
+
+    }
+    /* main parkings */
+    .parkingimg{
+        /* width: 20%; */
+        height: 150px;
+        /* display: inline-block; */
+        background: #8cc616;
+        color: black;
+        border: 1px solid #0071bb;
+        margin-bottom: 14px;
+        font-size: 200%;
+        color: #0071bb;
+        cursor: pointer;
+
+    }
+    .parkingimg:hover{
+        background: #8cc716;
+        color: black;
+        border: 1px solid #0071bb;
+    }
+    .parkingimg:active , .parkingimg:focus{
+        background: #8cc216;
+        box-shadow: 4px 4px 12px 4px #fff;
+        color: black;
+        border: 1px solid #0071bb;
+    }
+    .parkingimg::selection{
+        background: transparent;
+    }
+
+
+    .parkingimg-false{
+        /* width: 20%; */
+        height: 150px;
+        /* display: inline-block; */
+        background: #8cc616;
+        background: url(../img/car.jpg)no-repeat center center;
+        background-size: cover;
+        /* background-image: url(../img/car.jpg); */
+        color: black;
+        border: 1px solid #0071bb;
+        margin-bottom: 14px
+
+    }
+    .parkingimg-3{
+        /* width: 20%; */
+        height: 150px;
+        /* display: inline-block; */
+        background: #8cc616;
+        background: url(../img/car.jpg)no-repeat center center;
+        background-size: cover;
+        font-size: 200%;
+        font-weight: bolder;
+        /* background-image: url(../img/car.jpg); */
+        color: #222 ;
+        font-size : bold;
+        border: 1px solid #0071bb;
+        margin-bottom: 14px
+
+    }
+}
+
+@media (max-width: 201px) {
+    .main {
+        padding: 0
+    }
+    .main  .img {
+        width: 100%;
+        /* background: url("images/construction/transport-6.jpg")no-repeat center center fixed;
+        background-size: cover; */
+
+    }
+    .img{
+        width: 100%;
+    }
+    .position_absolute{
+        /* position: fixed; */
+        width: 100%;
+        /* z-index: +3 */
+    }
+    .park-main{
+        margin-top: 10%;
+        /* background-color: rgba(200 , 200 , 200 , 0.5 ) */
+    }
+    .border-radius{
+        border: 2px solid #0071bb;
+        padding: 8%;
+        margin: 2%;;
+        border-radius: 100%;
+        background: #0091bb;
+        z-index: 3;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        font-size: 120%
+    }
+    .border-radius:hover{
+        background: #0071bb;
+        cursor: pointer;
+    }
+    .border-radius:active , .border-radius:focus {
+        background: #0091bb;
+        box-shadow: 2px 2px 2px 2px #0071bb
+
+    }
+    .border-radius::selection {
+        background: none;
+    }
+    .border-radius-1{
+        border: 2px solid #8cc636;
+        padding: 8%;
+        box-shadow: 2px 2px 12px 2px #ddd;
+        margin: 2%;;
+        border-radius: 0% 100%;
+        background: #8cc636;
+        z-index: 3;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        font-size: 120%
+    }
+    .border-radius-1:hover{
+        background: #8cc616;
+        cursor: pointer;
+    }
+    .border-radius-1:active , .border-radius-1:focus {
+        background: #8cc636;
+        box-shadow: 2px 2px 12px 2px #fff
+
+    }
+    .border-radius-1::selection {
+        background: none;
+    }
+    .border-radius-3{
+        border: 2px solid #8cc636;
+        padding: 8%;
+        margin: 2%;;
+        border-radius: 100% 0%;
+        background: #8cc636;
+        box-shadow: 2px 2px 12px 2px #ddd;
+        z-index: 3;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        font-size: 120%
+    }
+    .border-radius-3:hover{
+        background: #8cc616;
+        cursor: pointer;
+    }
+    .border-radius-3:active , .border-radius-3:focus {
+        background: #8cc636;
+        box-shadow: 2px 2px 12px 2px #fff
+
+    }
+    .border-radius-3::selection {
+        background: none;
+    }
+    .border-radius-2{
+        border: 2px solid rgb(116 , 64 , 33 );
+        padding: 8%;
+        margin: 2%;;
+        border-radius: 190% 100% 20% 0%;
+        background: rgb(116 , 64 , 33 );
+        box-shadow: 2px 2px 12px 2px #ddd;
+        z-index: 3;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        font-size: 120%
+    }
+    .border-radius-2:hover{
+        background: rgb(116 , 60 , 33 );
+        cursor: pointer;
+    }
+    .border-radius-2:active , .border-radius-2:focus {
+        background: rgb(116 , 64 , 33 );
+        box-shadow: 2px 2px 12px 2px #fff
+
+    }
+    .border-radius-2::selection {
+        background: none;
+    }
+    .bg-marquee{
+        margin-top: 10%;
+        background: #0071bb;
+        opacity: 0.4;
+        color: #fff;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 130%;
+    }
+    .main .bg-blur{
+        display: block;
+        height: 580px;
+        /* background: #0091bb; */
+        /* background-image: url(../img/main.jpg); */
+        background: url(../img/download.jpg)no-repeat center center fixed;
+        background-size: cover;
+        opacity: .5em;
+        /* background: transparent; */
+
+    }
+    /* main parkings */
+    .parkingimg{
+        /* width: 20%; */
+        height: 150px;
+        /* display: inline-block; */
+        background: #8cc616;
+        color: black;
+        border: 1px solid #0071bb;
+        margin-bottom: 14px;
+        font-size: 200%;
+        color: #0071bb;
+        cursor: pointer;
+
+    }
+    .parkingimg:hover{
+        background: #8cc716;
+        color: black;
+        border: 1px solid #0071bb;
+    }
+    .parkingimg:active , .parkingimg:focus{
+        background: #8cc216;
+        box-shadow: 4px 4px 12px 4px #fff;
+        color: black;
+        border: 1px solid #0071bb;
+    }
+    .parkingimg::selection{
+        background: transparent;
+    }
+
+
+    .parkingimg-false{
+        /* width: 20%; */
+        height: 150px;
+        /* display: inline-block; */
+        background: #8cc616;
+        background: url(../img/car.jpg)no-repeat center center;
+        background-size: cover;
+        /* background-image: url(../img/car.jpg); */
+        color: black;
+        border: 1px solid #0071bb;
+        margin-bottom: 14px
+
+    }
+    .parkingimg-3{
+        /* width: 20%; */
+        height: 150px;
+        /* display: inline-block; */
+        background: #8cc616;
+        background: url(../img/car.jpg)no-repeat center center;
+        background-size: cover;
+        font-size: 200%;
+        font-weight: bolder;
+        /* background-image: url(../img/car.jpg); */
+        color: #222 ;
+        font-size : bold;
+        border: 1px solid #0071bb;
+        margin-bottom: 14px
+
+    }
+}
+
+@media (min-width: 201px) {
+    .main {
+        padding: 0
+    }
+    .main  .img {
+        width: 100%;
+        /* background: url("images/construction/transport-6.jpg")no-repeat center center fixed;
+        background-size: cover; */
+
+    }
+    .img{
+        width: 100%;
+    }
+    .position_absolute{
+        /* position: fixed; */
+        width: 100%;
+        z-index: +3
+    }
+    .park-main{
+        margin-top: 10%;
+        /* background-color: rgba(200 , 200 , 200 , 0.5 ) */
+    }
+    .border-radius{
+        border: 2px solid #0071bb;
+        padding: 8%;
+        margin: 2%;;
+        border-radius: 100%;
+        background: #0091bb;
+        z-index: 3;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        font-size: 120%
+    }
+    .border-radius:hover{
+        background: #0071bb;
+        cursor: pointer;
+    }
+    .border-radius:active , .border-radius:focus {
+        background: #0091bb;
+        box-shadow: 2px 2px 2px 2px #0071bb
+
+    }
+    .border-radius::selection {
+        background: none;
+    }
+    .border-radius-1{
+        border: 2px solid #8cc636;
+        padding: 8%;
+        box-shadow: 2px 2px 12px 2px #ddd;
+        margin: 2%;;
+        border-radius: 0% 100%;
+        background: #8cc636;
+        z-index: 3;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        font-size: 120%
+    }
+    .border-radius-1:hover{
+        background: #8cc616;
+        cursor: pointer;
+    }
+    .border-radius-1:active , .border-radius-1:focus {
+        background: #8cc636;
+        box-shadow: 2px 2px 12px 2px #fff
+
+    }
+    .border-radius-1::selection {
+        background: none;
+    }
+    .border-radius-3{
+        border: 2px solid #8cc636;
+        padding: 8%;
+        margin: 2%;;
+        border-radius: 100% 0%;
+        background: #8cc636;
+        box-shadow: 2px 2px 12px 2px #ddd;
+        z-index: 3;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        font-size: 120%
+    }
+    .border-radius-3:hover{
+        background: #8cc616;
+        cursor: pointer;
+    }
+    .border-radius-3:active , .border-radius-3:focus {
+        background: #8cc636;
+        box-shadow: 2px 2px 12px 2px #fff
+
+    }
+    .border-radius-3::selection {
+        background: none;
+    }
+    .border-radius-2{
+        border: 2px solid rgb(116 , 64 , 33 );
+        padding: 8%;
+        margin: 2%;;
+        border-radius: 190% 100% 20% 0%;
+        background: rgb(116 , 64 , 33 );
+        box-shadow: 2px 2px 12px 2px #ddd;
+        z-index: 3;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        font-size: 120%
+    }
+    .border-radius-2:hover{
+        background: rgb(116 , 60 , 33 );
+        cursor: pointer;
+    }
+    .border-radius-2:active , .border-radius-2:focus {
+        background: rgb(116 , 64 , 33 );
+        box-shadow: 2px 2px 12px 2px #fff
+
+    }
+    .border-radius-2::selection {
+        background: none;
+    }
+    .bg-marquee{
+        margin-top: 10%;
+        background: #0071bb;
+        opacity: 0.4;
+        color: #fff;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 130%;
+    }
+    .main .bg-blur{
+        display: block;
+        height: 580px;
+        /* background: #0091bb; */
+        /* background-image: url(../img/main.jpg); */
+        background: url(../img/download.jpg)no-repeat center center fixed;
+        background-size: cover;
+        opacity: .5em;
+        /* background: transparent; */
+
+    }
+    /* main parkings */
+    .parkingimg{
+        /* width: 20%; */
+        height: 150px;
+        /* display: inline-block; */
+        background: #8cc616;
+        color: black;
+        border: 1px solid #0071bb;
+        margin-bottom: 14px;
+        font-size: 200%;
+        color: #0071bb;
+        cursor: pointer;
+
+    }
+    .parkingimg:hover{
+        background: #8cc716;
+        color: black;
+        border: 1px solid #0071bb;
+    }
+    .parkingimg:active , .parkingimg:focus{
+        background: #8cc216;
+        box-shadow: 4px 4px 12px 4px #fff;
+        color: black;
+        border: 1px solid #0071bb;
+    }
+    .parkingimg::selection{
+        background: transparent;
+    }
+
+
+    .parkingimg-false{
+        /* width: 20%; */
+        height: 150px;
+        /* display: inline-block; */
+        background: #8cc616;
+        background: url(../img/car.jpg)no-repeat center center;
+        background-size: cover;
+        /* background-image: url(../img/car.jpg); */
+        color: black;
+        border: 1px solid #0071bb;
+        margin-bottom: 14px
+
+    }
+    .parkingimg-3{
+        /* width: 20%; */
+        height: 150px;
+        /* display: inline-block; */
+        background: #8cc616;
+        background: url(../img/car.jpg)no-repeat center center;
+        background-size: cover;
+        font-size: 200%;
+        font-weight: bolder;
+        /* background-image: url(../img/car.jpg); */
+        color: #222 ;
+        font-size : bold;
+        border: 1px solid #0071bb;
+        margin-bottom: 14px
+
+    }
+}
+
+@media (min-width: 576px) {
+    .main {
+        padding: 0
+    }
+    .main  .img {
+        width: 100%;
+        /* background: url("images/construction/transport-6.jpg")no-repeat center center fixed;
+        background-size: cover; */
+
+    }
+    .img{
+        width: 100%;
+    }
+    .position_absolute{
+        /* position: fixed; */
+        width: 100%;
+        z-index: +3
+    }
+    .park-main{
+        margin-top: 10%;
+        /* background-color: rgba(200 , 200 , 200 , 0.5 ) */
+    }
+    .border-radius{
+        border: 2px solid #0071bb;
+        padding: 8%;
+        margin: 2%;;
+        border-radius: 100%;
+        background: #0091bb;
+        z-index: 3;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        font-size: 120%
+    }
+    .border-radius:hover{
+        background: #0071bb;
+        cursor: pointer;
+    }
+    .border-radius:active , .border-radius:focus {
+        background: #0091bb;
+        box-shadow: 2px 2px 2px 2px #0071bb
+
+    }
+    .border-radius::selection {
+        background: none;
+    }
+    .border-radius-1{
+        border: 2px solid #8cc636;
+        padding: 8%;
+        box-shadow: 2px 2px 12px 2px #ddd;
+        margin: 2%;;
+        border-radius: 0% 100%;
+        background: #8cc636;
+        z-index: 3;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        font-size: 120%
+    }
+    .border-radius-1:hover{
+        background: #8cc616;
+        cursor: pointer;
+    }
+    .border-radius-1:active , .border-radius-1:focus {
+        background: #8cc636;
+        box-shadow: 2px 2px 12px 2px #fff
+
+    }
+    .border-radius-1::selection {
+        background: none;
+    }
+    .border-radius-3{
+        border: 2px solid #8cc636;
+        padding: 8%;
+        margin: 2%;;
+        border-radius: 100% 0%;
+        background: #8cc636;
+        box-shadow: 2px 2px 12px 2px #ddd;
+        z-index: 3;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        font-size: 120%
+    }
+    .border-radius-3:hover{
+        background: #8cc616;
+        cursor: pointer;
+    }
+    .border-radius-3:active , .border-radius-3:focus {
+        background: #8cc636;
+        box-shadow: 2px 2px 12px 2px #fff
+
+    }
+    .border-radius-3::selection {
+        background: none;
+    }
+    .border-radius-2{
+        border: 2px solid rgb(116 , 64 , 33 );
+        padding: 8%;
+        margin: 2%;;
+        border-radius: 190% 100% 20% 0%;
+        background: rgb(116 , 64 , 33 );
+        box-shadow: 2px 2px 12px 2px #ddd;
+        z-index: 3;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        font-size: 120%
+    }
+    .border-radius-2:hover{
+        background: rgb(116 , 60 , 33 );
+        cursor: pointer;
+    }
+    .border-radius-2:active , .border-radius-2:focus {
+        background: rgb(116 , 64 , 33 );
+        box-shadow: 2px 2px 12px 2px #fff
+
+    }
+    .border-radius-2::selection {
+        background: none;
+    }
+    .bg-marquee{
+        margin-top: 10%;
+        background: #0071bb;
+        opacity: 0.4;
+        color: #fff;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 130%;
+    }
+    .main .bg-blur{
+        display: block;
+        height: 580px;
+        /* background: #0091bb; */
+        /* background-image: url(../img/main.jpg); */
+        background: url(../img/download.jpg)no-repeat center center fixed;
+        background-size: cover;
+        opacity: .5em;
+        /* background: transparent; */
+
+    }
+    /* main parkings */
+    .parkingimg{
+        /* width: 20%; */
+        height: 150px;
+        /* display: inline-block; */
+        background: #8cc616;
+        color: black;
+        border: 1px solid #0071bb;
+        margin-bottom: 14px;
+        font-size: 200%;
+        color: #0071bb;
+        cursor: pointer;
+
+    }
+    .parkingimg:hover{
+        background: #8cc716;
+        color: black;
+        border: 1px solid #0071bb;
+    }
+    .parkingimg:active , .parkingimg:focus{
+        background: #8cc216;
+        box-shadow: 4px 4px 12px 4px #fff;
+        color: black;
+        border: 1px solid #0071bb;
+    }
+    .parkingimg::selection{
+        background: transparent;
+    }
+
+
+    .parkingimg-false{
+        /* width: 20%; */
+        height: 150px;
+        /* display: inline-block; */
+        background: #8cc616;
+        background: url(../img/car.jpg)no-repeat center center;
+        background-size: cover;
+        /* background-image: url(../img/car.jpg); */
+        color: black;
+        border: 1px solid #0071bb;
+        margin-bottom: 14px
+
+    }
+    .parkingimg-3{
+        /* width: 20%; */
+        height: 150px;
+        /* display: inline-block; */
+        background: #8cc616;
+        background: url(../img/car.jpg)no-repeat center center;
+        background-size: cover;
+        font-size: 200%;
+        font-weight: bolder;
+        /* background-image: url(../img/car.jpg); */
+        color: #222 ;
+        font-size : bold;
+        border: 1px solid #0071bb;
+        margin-bottom: 14px
+
+    }
+}
+
+@media (min-width: 768px) {
+    .main {
+        padding: 0
+    }
+    .main  .img {
+        width: 100%;
+        /* background: url("images/construction/transport-6.jpg")no-repeat center center fixed;
+        background-size: cover; */
+
+    }
+    .img{
+        width: 100%;
+    }
+    .position_absolute{
+        /* position: fixed; */
+        width: 100%;
+        z-index: +3
+    }
+    .park-main{
+        margin-top: 10%;
+        /* background-color: rgba(200 , 200 , 200 , 0.5 ) */
+    }
+    .border-radius{
+        border: 2px solid #0071bb;
+        padding: 8%;
+        margin: 2%;;
+        border-radius: 100%;
+        background: #0091bb;
+        z-index: 3;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        font-size: 120%
+    }
+    .border-radius:hover{
+        background: #0071bb;
+        cursor: pointer;
+    }
+    .border-radius:active , .border-radius:focus {
+        background: #0091bb;
+        box-shadow: 2px 2px 2px 2px #0071bb
+
+    }
+    .border-radius::selection {
+        background: none;
+    }
+    .border-radius-1{
+        border: 2px solid #8cc636;
+        padding: 8%;
+        box-shadow: 2px 2px 12px 2px #ddd;
+        margin: 2%;;
+        border-radius: 0% 100%;
+        background: #8cc636;
+        z-index: 3;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        font-size: 120%
+    }
+    .border-radius-1:hover{
+        background: #8cc616;
+        cursor: pointer;
+    }
+    .border-radius-1:active , .border-radius-1:focus {
+        background: #8cc636;
+        box-shadow: 2px 2px 12px 2px #fff
+
+    }
+    .border-radius-1::selection {
+        background: none;
+    }
+    .border-radius-3{
+        border: 2px solid #8cc636;
+        padding: 8%;
+        margin: 2%;;
+        border-radius: 100% 0%;
+        background: #8cc636;
+        box-shadow: 2px 2px 12px 2px #ddd;
+        z-index: 3;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        font-size: 120%
+    }
+    .border-radius-3:hover{
+        background: #8cc616;
+        cursor: pointer;
+    }
+    .border-radius-3:active , .border-radius-3:focus {
+        background: #8cc636;
+        box-shadow: 2px 2px 12px 2px #fff
+
+    }
+    .border-radius-3::selection {
+        background: none;
+    }
+    .border-radius-2{
+        border: 2px solid rgb(116 , 64 , 33 );
+        padding: 8%;
+        margin: 2%;;
+        border-radius: 190% 100% 20% 0%;
+        background: rgb(116 , 64 , 33 );
+        box-shadow: 2px 2px 12px 2px #ddd;
+        z-index: 3;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        font-size: 120%
+    }
+    .border-radius-2:hover{
+        background: rgb(116 , 60 , 33 );
+        cursor: pointer;
+    }
+    .border-radius-2:active , .border-radius-2:focus {
+        background: rgb(116 , 64 , 33 );
+        box-shadow: 2px 2px 12px 2px #fff
+
+    }
+    .border-radius-2::selection {
+        background: none;
+    }
+    .bg-marquee{
+        margin-top: 10%;
+        background: #0071bb;
+        opacity: 0.4;
+        color: #fff;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 130%;
+    }
+    .main .bg-blur{
+        display: block;
+        height: 580px;
+        /* background: #0091bb; */
+        /* background-image: url(../img/main.jpg); */
+        background: url(../img/download.jpg)no-repeat center center fixed;
+        background-size: cover;
+        opacity: .5em;
+        /* background: transparent; */
+
+    }
+    /* main parkings */
+    .parkingimg{
+        /* width: 20%; */
+        height: 150px;
+        /* display: inline-block; */
+        background: #8cc616;
+        color: black;
+        border: 1px solid #0071bb;
+        margin-bottom: 14px;
+        font-size: 200%;
+        color: #0071bb;
+        cursor: pointer;
+
+    }
+    .parkingimg:hover{
+        background: #8cc716;
+        color: black;
+        border: 1px solid #0071bb;
+    }
+    .parkingimg:active , .parkingimg:focus{
+        background: #8cc216;
+        box-shadow: 4px 4px 12px 4px #fff;
+        color: black;
+        border: 1px solid #0071bb;
+    }
+    .parkingimg::selection{
+        background: transparent;
+    }
+
+
+    .parkingimg-false{
+        /* width: 20%; */
+        height: 150px;
+        /* display: inline-block; */
+        background: #8cc616;
+        background: url(../img/car.jpg)no-repeat center center;
+        background-size: cover;
+        /* background-image: url(../img/car.jpg); */
+        color: black;
+        border: 1px solid #0071bb;
+        margin-bottom: 14px
+
+    }
+    .parkingimg-3{
+        /* width: 20%; */
+        height: 150px;
+        /* display: inline-block; */
+        background: #8cc616;
+        background: url(../img/car.jpg)no-repeat center center;
+        background-size: cover;
+        font-size: 200%;
+        font-weight: bolder;
+        /* background-image: url(../img/car.jpg); */
+        color: #222 ;
+        font-size : bold;
+        border: 1px solid #0071bb;
+        margin-bottom: 14px
+
+    }
+}
+
+@media (min-width: 992px) {
+    .main {
+        padding: 0
+    }
+    .main  .img {
+        width: 100%;
+        /* background: url("images/construction/transport-6.jpg")no-repeat center center fixed;
+        background-size: cover; */
+
+    }
+    .img{
+        width: 100%;
+    }
+    .position_absolute{
+        position: fixed;
+        width: 100%;
+        z-index: +3
+    }
+    .park-main{
+        margin-top: 10%;
+        /* background-color: rgba(200 , 200 , 200 , 0.5 ) */
+    }
+    .border-radius{
+        border: 2px solid #0071bb;
+        padding: 8%;
+        margin: 2%;;
+        border-radius: 100%;
+        background: #0091bb;
+        z-index: 3;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        font-size: 120%
+    }
+    .border-radius:hover{
+        background: #0071bb;
+        cursor: pointer;
+    }
+    .border-radius:active , .border-radius:focus {
+        background: #0091bb;
+        box-shadow: 2px 2px 2px 2px #0071bb
+
+    }
+    .border-radius::selection {
+        background: none;
+    }
+    .border-radius-1{
+        border: 2px solid #8cc636;
+        padding: 8%;
+        box-shadow: 2px 2px 12px 2px #ddd;
+        margin: 2%;;
+        border-radius: 0% 100%;
+        background: #8cc636;
+        z-index: 3;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        font-size: 120%
+    }
+    .border-radius-1:hover{
+        background: #8cc616;
+        cursor: pointer;
+    }
+    .border-radius-1:active , .border-radius-1:focus {
+        background: #8cc636;
+        box-shadow: 2px 2px 12px 2px #fff
+
+    }
+    .border-radius-1::selection {
+        background: none;
+    }
+    .border-radius-3{
+        border: 2px solid #8cc636;
+        padding: 8%;
+        margin: 2%;;
+        border-radius: 100% 0%;
+        background: #8cc636;
+        box-shadow: 2px 2px 12px 2px #ddd;
+        z-index: 3;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        font-size: 120%
+    }
+    .border-radius-3:hover{
+        background: #8cc616;
+        cursor: pointer;
+    }
+    .border-radius-3:active , .border-radius-3:focus {
+        background: #8cc636;
+        box-shadow: 2px 2px 12px 2px #fff
+
+    }
+    .border-radius-3::selection {
+        background: none;
+    }
+    .border-radius-2{
+        border: 2px solid rgb(116 , 64 , 33 );
+        padding: 8%;
+        margin: 2%;;
+        border-radius: 190% 100% 20% 0%;
+        background: rgb(116 , 64 , 33 );
+        box-shadow: 2px 2px 12px 2px #ddd;
+        z-index: 3;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        font-size: 120%
+    }
+    .border-radius-2:hover{
+        background: rgb(116 , 60 , 33 );
+        cursor: pointer;
+    }
+    .border-radius-2:active , .border-radius-2:focus {
+        background: rgb(116 , 64 , 33 );
+        box-shadow: 2px 2px 12px 2px #fff
+
+    }
+    .border-radius-2::selection {
+        background: none;
+    }
+    .bg-marquee{
+        margin-top: 10%;
+        background: #0071bb;
+        opacity: 0.4;
+        color: #fff;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 130%;
+    }
+    .main .bg-blur{
+        display: block;
+        height: 580px;
+        /* background: #0091bb; */
+        /* background-image: url(../img/main.jpg); */
+        background: url(../img/download.jpg)no-repeat center center fixed;
+        background-size: cover;
+        opacity: .5em;
+        /* background: transparent; */
+
+    }
+    /* main parkings */
+    .parkingimg{
+        /* width: 20%; */
+        height: 150px;
+        /* display: inline-block; */
+        background: #8cc616;
+        color: black;
+        border: 1px solid #0071bb;
+        margin-bottom: 14px;
+        font-size: 200%;
+        color: #0071bb;
+        cursor: pointer;
+
+    }
+    .parkingimg:hover{
+        background: #8cc716;
+        color: black;
+        border: 1px solid #0071bb;
+    }
+    .parkingimg:active , .parkingimg:focus{
+        background: #8cc216;
+        box-shadow: 4px 4px 12px 4px #fff;
+        color: black;
+        border: 1px solid #0071bb;
+    }
+    .parkingimg::selection{
+        background: transparent;
+    }
+
+
+    .parkingimg-false{
+        /* width: 20%; */
+        height: 150px;
+        /* display: inline-block; */
+        background: #8cc616;
+        background: url(../img/car.jpg)no-repeat center center;
+        background-size: cover;
+        /* background-image: url(../img/car.jpg); */
+        color: black;
+        border: 1px solid #0071bb;
+        margin-bottom: 14px
+
+    }
+    .parkingimg-3{
+        /* width: 20%; */
+        height: 150px;
+        /* display: inline-block; */
+        background: #8cc616;
+        background: url(../img/car.jpg)no-repeat center center;
+        background-size: cover;
+        font-size: 200%;
+        font-weight: bolder;
+        /* background-image: url(../img/car.jpg); */
+        color: #222 ;
+        font-size : bold;
+        border: 1px solid #0071bb;
+        margin-bottom: 14px
+
+    }
+}
+
+@media (min-width: 1200px) {
+    .main {
+        padding: 0
+    }
+    .main  .img {
+        width: 100%;
+        /* background: url("images/construction/transport-6.jpg")no-repeat center center fixed;
+        background-size: cover; */
+
+    }
+    .img{
+        width: 100%;
+    }
+    .position_absolute{
+        position: fixed;
+        width: 100%;
+        z-index: +3
+    }
+    .park-main{
+        margin-top: 10%;
+        /* background-color: rgba(200 , 200 , 200 , 0.5 ) */
+    }
+    .border-radius{
+        border: 2px solid #0071bb;
+        padding: 8%;
+        margin: 2%;;
+        border-radius: 100%;
+        background: #0091bb;
+        z-index: 3;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        font-size: 120%
+    }
+    .border-radius:hover{
+        background: #0071bb;
+        cursor: pointer;
+    }
+    .border-radius:active , .border-radius:focus {
+        background: #0091bb;
+        box-shadow: 2px 2px 2px 2px #0071bb
+
+    }
+    .border-radius::selection {
+        background: none;
+    }
+    .border-radius-1{
+        border: 2px solid #8cc636;
+        padding: 8%;
+        box-shadow: 2px 2px 12px 2px #ddd;
+        margin: 2%;;
+        border-radius: 0% 100%;
+        background: #8cc636;
+        z-index: 3;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        font-size: 120%
+    }
+    .border-radius-1:hover{
+        background: #8cc616;
+        cursor: pointer;
+    }
+    .border-radius-1:active , .border-radius-1:focus {
+        background: #8cc636;
+        box-shadow: 2px 2px 12px 2px #fff
+
+    }
+    .border-radius-1::selection {
+        background: none;
+    }
+    .border-radius-3{
+        border: 2px solid #8cc636;
+        padding: 8%;
+        margin: 2%;;
+        border-radius: 100% 0%;
+        background: #8cc636;
+        box-shadow: 2px 2px 12px 2px #ddd;
+        z-index: 3;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        font-size: 120%
+    }
+    .border-radius-3:hover{
+        background: #8cc616;
+        cursor: pointer;
+    }
+    .border-radius-3:active , .border-radius-3:focus {
+        background: #8cc636;
+        box-shadow: 2px 2px 12px 2px #fff
+
+    }
+    .border-radius-3::selection {
+        background: none;
+    }
+    .border-radius-2{
+        border: 2px solid rgb(116 , 64 , 33 );
+        padding: 8%;
+        margin: 2%;;
+        border-radius: 190% 100% 20% 0%;
+        background: rgb(116 , 64 , 33 );
+        box-shadow: 2px 2px 12px 2px #ddd;
+        z-index: 3;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        font-size: 120%
+    }
+    .border-radius-2:hover{
+        background: rgb(116 , 60 , 33 );
+        cursor: pointer;
+    }
+    .border-radius-2:active , .border-radius-2:focus {
+        background: rgb(116 , 64 , 33 );
+        box-shadow: 2px 2px 12px 2px #fff
+
+    }
+    .border-radius-2::selection {
+        background: none;
+    }
+    .bg-marquee{
+        margin-top: 10%;
+        background: #0071bb;
+        opacity: 0.4;
+        color: #fff;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 130%;
+    }
+    .main .bg-blur{
+        display: block;
+        height: 580px;
+        /* background: #0091bb; */
+        /* background-image: url(../img/main.jpg); */
+        background: url(../img/download.jpg)no-repeat center center fixed;
+        background-size: cover;
+        opacity: .5em;
+        /* background: transparent; */
+
+    }
+    /* main parkings */
+    .parkingimg{
+        /* width: 20%; */
+        height: 150px;
+        /* display: inline-block; */
+        background: #8cc616;
+        color: black;
+        border: 1px solid #0071bb;
+        margin-bottom: 14px;
+        font-size: 200%;
+        color: #0071bb;
+        cursor: pointer;
+
+    }
+    .parkingimg:hover{
+        background: #8cc716;
+        color: black;
+        border: 1px solid #0071bb;
+    }
+    .parkingimg:active , .parkingimg:focus{
+        background: #8cc216;
+        box-shadow: 4px 4px 12px 4px #fff;
+        color: black;
+        border: 1px solid #0071bb;
+    }
+    .parkingimg::selection{
+        background: transparent;
+    }
+
+
+    .parkingimg-false{
+        /* width: 20%; */
+        height: 150px;
+        /* display: inline-block; */
+        background: #8cc616;
+        background: url(../img/car.jpg)no-repeat center center;
+        background-size: cover;
+        /* background-image: url(../img/car.jpg); */
+        color: black;
+        border: 1px solid #0071bb;
+        margin-bottom: 14px
+
+    }
+    .parkingimg-3{
+        /* width: 20%; */
+        height: 150px;
+        /* display: inline-block; */
+        background: #8cc616;
+        background: url(../img/car.jpg)no-repeat center center;
+        background-size: cover;
+        font-size: 200%;
+        font-weight: bolder;
+        /* background-image: url(../img/car.jpg); */
+        color: #222 ;
+        font-size : bold;
+        border: 1px solid #0071bb;
+        margin-bottom: 14px
+
+    }
+}   

@@ -1,0 +1,15 @@
+const actionTypes = {
+    USER: 'USER',
+    STUDENT: 'STUDENT',
+    COMPANY: 'COMPANY',
+    JOBPOST: 'JOBPOST',
+    ALLJOBPOST: 'ALLJOBPOST',
+    MY_APPLY: 'MY_APPLY',
+    DELETE_POST: 'DELETE_POST',
+    ALLUSERS: 'ALLUSERS',
+    SEARCH_USERS: 'SEARCH_USERS',
+    JOB_CANCEL: 'JOB_CANCEL',
+    JOB_APPLY: 'JOB_APPLY',
+
+}
+export default actionTypes;

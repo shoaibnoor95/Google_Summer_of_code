@@ -1,0 +1,111 @@
+@media (max-width: 575px) {
+    .fotter-col li{
+        /* display: inline-block; */
+        /* padding: 1%; */
+        /* font-size: 120%;; */
+        color: #8cc636
+    }
+    /* .font-120{ */
+        /* font-size: 120%; */
+    /* } */
+    .text-info-f{
+        color: #2281aa;
+        /* font-size: 160% */
+    }
+}
+
+@media (max-width: 201px) {
+    .fotter-col li{
+        /* display: inline-block; */
+        /* padding: 1%; */
+        /* font-size: 120%;; */
+        color: #8cc636
+    }
+    /* .font-120{
+        font-size: 120%;
+    } */
+    .text-info-f{
+        color: #2281aa;
+        /* font-size: 160% */
+    }
+}
+
+@media (min-width: 201px) {
+    .fotter-col li{
+        /* display: inline-block; */
+        /* padding: 1%; */
+        /* font-size: 120%;; */
+        color: #8cc636
+    }
+    /* .font-120{
+        font-size: 120%;
+    } */
+    .text-info-f{
+        color: #2281aa;
+        /* font-size: 160% */
+    }
+}
+
+@media (min-width: 576px) {
+    .fotter-col li{
+        display: inline-block;
+        /* padding: 1%; */
+        /* font-size: 120%;; */
+        color: #8cc636
+    }
+    .font-120{
+        font-size: 120%;
+    }
+    .text-info-f{
+        color: #2281aa;
+        /* font-size: 160% */
+    }
+}
+
+@media (min-width: 768px) {
+    .fotter-col li{
+        display: inline-block;
+        padding: 1%;
+        /* font-size: 120%;; */
+        color: #8cc636
+    }
+    .font-120{
+        /* font-size: 120%; */
+    }
+    .text-info-f{
+        color: #2281aa;
+        /* font-size: 160% */
+    }
+}
+
+@media (min-width: 992px) {
+    .fotter-col li{
+        display: inline-block;
+        padding: 1%;
+        font-size: 120%;;
+        color: #8cc636
+    }
+    .font-120{
+        font-size: 120%;
+    }
+    .text-info-f{
+        color: #2281aa;
+        font-size: 160%
+    }
+}
+
+@media (min-width: 1200px) {
+    .fotter-col li{
+        display: inline-block;
+        padding: 1%;
+        font-size: 120%;;
+        color: #8cc636
+    }
+    .font-120{
+        font-size: 120%;
+    }
+    .text-info-f{
+        color: #2281aa;
+        font-size: 160%
+    }
+}   

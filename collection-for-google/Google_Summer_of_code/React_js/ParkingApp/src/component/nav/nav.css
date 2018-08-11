@@ -1,0 +1,291 @@
+.pointer {
+    cursor: pointer;
+}
+
+@media (max-width: 575px) {
+    .bg-fluid {
+        padding: 0px 50px 0px 50px ;
+        display: none;
+   }
+   .vertical-middle{
+       vertical-align: bottom
+   }
+   .nav-1-nav-2 img {
+       width: 16%;
+       cursor: pointer;
+   }
+   .btn-nav {
+       border-radius: 5px;
+       background: #0071bb;
+       /* font-size: 110%; */
+       color: #fff;
+       cursor: pointer;
+   }
+   .btn-nav:hover {
+       background: #0071bb
+   }
+   .btn-nav:active {
+        background: #0071bb
+   }
+   .btn-nav-log {
+       border-radius: 5px;
+       background: #8cc636;
+       /* font-size: 110%; */
+       color: #fff;
+       cursor: pointer;
+   }
+   .btn-nav-log:hover {
+        background: #8cc676
+   }
+   .btn-nav-log:active {
+        background: #8cc696
+   }
+
+}
+
+@media (max-width: 201px) {
+    .bg-fluid {
+        padding: 0px 50px  0px 50px;
+        display: none
+   }
+   .vertical-middle{
+       vertical-align: bottom
+   }
+   .nav-1-nav-2 img {
+       width: 16%;
+       cursor: pointer;
+   }
+   .btn-nav {
+       border-radius: 5px;
+       background: #0071bb;
+       /* font-size: 110%; */
+       color: #fff;
+       cursor: pointer;
+   }
+   .btn-nav:hover {
+       background: #0071bb
+   }
+   .btn-nav:active {
+        background: #0071bb
+   }
+   .btn-nav-log {
+       border-radius: 5px;
+       background: #8cc636;
+       /* font-size: 110%; */
+       color: #fff;
+       cursor: pointer;
+   }
+   .btn-nav-log:hover {
+        background: #8cc676
+   }
+   .btn-nav-log:active {
+        background: #8cc696
+   }
+
+}
+
+@media (min-width: 201px) {
+    .bg-fluid {
+        padding: 0px 50px  0px 50px;
+        display: none
+   }
+   .vertical-middle{
+       vertical-align: bottom
+   }
+   .nav-1-nav-2 img {
+       width: 16%;
+       cursor: pointer;
+   }
+   .btn-nav {
+       border-radius: 5px;
+       background: #0071bb;
+       /* font-size: 110%; */
+       color: #fff;
+       cursor: pointer;
+   }
+   .btn-nav:hover {
+       background: #0071bb
+   }
+   .btn-nav:active {
+        background: #0071bb
+   }
+   .btn-nav-log {
+       border-radius: 5px;
+       background: #8cc636;
+       /* font-size: 110%; */
+       color: #fff;
+       cursor: pointer;
+   }
+   .btn-nav-log:hover {
+        background: #8cc676
+   }
+   .btn-nav-log:active {
+        background: #8cc696
+   }
+
+}
+
+@media (min-width: 576px) {
+    .bg-fluid {
+        padding: 0px 50px  0px 50px;
+        display: none
+   }
+   .vertical-middle{
+       vertical-align: bottom
+   }
+   .nav-1-nav-2 img {
+       width: 16%;
+       cursor: pointer;
+   }
+   .btn-nav {
+       border-radius: 5px;
+       background: #0071bb;
+       /* font-size: 110%; */
+       color: #fff;
+       cursor: pointer;
+   }
+   .btn-nav:hover {
+       background: #0071bb
+   }
+   .btn-nav:active {
+        background: #0071bb
+   }
+   .btn-nav-log {
+       border-radius: 5px;
+       background: #8cc636;
+       /* font-size: 110%; */
+       color: #fff;
+       cursor: pointer;
+   }
+   .btn-nav-log:hover {
+        background: #8cc676
+   }
+   .btn-nav-log:active {
+        background: #8cc696
+   }
+
+}
+
+@media (min-width: 790px) {
+    .bg-fluid {
+        padding: 0px 50px  0px 50px;
+        display: none
+        
+   }
+   .vertical-middle{
+       vertical-align: bottom
+   }
+   .nav-1-nav-2 img {
+       width: 16%;
+       cursor: pointer;
+   }
+   .btn-nav {
+       border-radius: 5px;
+       background: #0071bb;
+       /* font-size: 110%; */
+       color: #fff;
+       cursor: pointer;
+   }
+   .btn-nav:hover {
+       background: #0071bb
+   }
+   .btn-nav:active {
+        background: #0071bb
+   }
+   .btn-nav-log {
+       border-radius: 5px;
+       background: #8cc636;
+       /* font-size: 110%; */
+       color: #fff;
+       cursor: pointer;
+   }
+   .btn-nav-log:hover {
+        background: #8cc676
+   }
+   .btn-nav-log:active {
+        background: #8cc696
+   }
+
+}
+
+@media (min-width: 1092px) {
+    .bg-fluid {
+        padding: 0px 50px  0px 50px;
+        display: block
+   }
+   .vertical-middle{
+       vertical-align: bottom
+   }
+   .nav-1-nav-2 img {
+       width: 16%;
+       cursor: pointer;
+   }
+   .btn-nav {
+       border-radius: 5px;
+       background: #0071bb;
+       font-size: 110%;
+       color: #fff;
+       cursor: pointer;
+   }
+   .btn-nav:hover {
+       background: #0071bb
+   }
+   .btn-nav:active {
+        background: #0071bb
+   }
+   .btn-nav-log {
+       border-radius: 5px;
+       background: #8cc636;
+       font-size: 110%;
+       color: #fff;
+       cursor: pointer;
+   }
+   .btn-nav-log:hover {
+        background: #8cc676
+   }
+   .btn-nav-log:active {
+        background: #8cc696
+   }
+
+}
+
+@media (min-width: 1200px) {
+    .bg-fluid {
+        padding: 0px 50px  0px 50px;
+        display: block
+   }
+   .vertical-middle{
+       vertical-align: bottom
+   }
+   .nav-1-nav-2 img {
+       width: 16%;
+       cursor: pointer;
+   }
+   .btn-nav {
+       border-radius: 5px;
+       background: #0071bb;
+       font-size: 110%;
+       color: #fff;
+       cursor: pointer;
+   }
+   .btn-nav:hover {
+       background: #0071bb
+   }
+   .btn-nav:active {
+        background: #0071bb
+   }
+   .btn-nav-log {
+       border-radius: 5px;
+       background: #8cc636;
+       font-size: 110%;
+       color: #fff;
+       cursor: pointer;
+   }
+   .btn-nav-log:hover {
+        background: #8cc676
+   }
+   .btn-nav-log:active {
+        background: #8cc696
+   }
+
+}   
